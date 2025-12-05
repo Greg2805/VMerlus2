@@ -36,7 +36,7 @@
     # Image
     vm_image_publisher: Canonical
     vm_image_offer: ubuntu-24_04-lts
-    vm_image_sku: "server-gen2"
+    vm_image_sku: "server-gen1"
     vm_image_version: latest
 
   tasks:
