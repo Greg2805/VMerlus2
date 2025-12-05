@@ -1,0 +1,38 @@
+<nav class="navbar">
+  <a routerLink="/" class="logo-container">
+    <img src="assets/Logo.png" alt="FC Lorient Logo" class="logo-image" />
+  </a>
+  <ul class="nav-links">
+    <li><a routerLink="/forum">Forum</a></li>
+    <li><a routerLink="/boutique">Boutique</a></li>
+    <li><a routerLink="/equipe">Équipe</a></li>
+    <li><a routerLink="/infos">Infos</a></li>
+    
+    <!-- Bouton Admin (visible uniquement pour les admins) -->
+    <li *ngIf="isAdmin">
+      <a routerLink="/admin" class="admin-link">
+        <mat-icon>admin_panel_settings</mat-icon>
+        <span>Admin</span>
+      </a>
+    </li>
+    
+    <!-- État de connexion -->
+    <li class="auth-section" *ngIf="isLoggedIn">
+      <div class="user-info">
+        <mat-icon class="user-icon">person</mat-icon>
+        <span class="user-name">{{ currentUser?.firstName || 'Utilisateur' }}</span>
+        <button class="logout-btn" (click)="logout()" mat-icon-button title="Se déconnecter">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </div>
+    </li>
+    
+    <!-- Lien de connexion (visible si non connecté) -->
+    <li class="auth-section" *ngIf="!isLoggedIn">
+      <a routerLink="/login" class="login-link-text">
+        <mat-icon>login</mat-icon>
+        <span>Se connecter</span>
+      </a>
+    </li>
+  </ul>
+</nav>

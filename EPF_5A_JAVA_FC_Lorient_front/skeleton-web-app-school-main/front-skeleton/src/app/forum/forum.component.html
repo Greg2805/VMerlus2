@@ -1,0 +1,53 @@
+<section class="forum">
+  <h1>Forum</h1>
+
+  <div class="forum-layout">
+    <div class="messages-pane">
+      <h2>Messages</h2>
+      <ul class="message-list">
+        <li *ngFor="let m of messages" class="message-item">
+          <div class="meta">
+            <strong>{{ m.firstName || 'Utilisateur' }}</strong>
+            <span class="date">{{ m.createdAt | date:'short' }}</span>
+          </div>
+          <div class="content">{{ m.message }}</div>
+        </li>
+      </ul>
+    </div>
+
+    <aside class="form-pane">
+      <h2>Nouveau message</h2>
+      <div *ngIf="isLoggedIn">
+        <form (ngSubmit)="sendMessage()" class="message-form">
+          <textarea
+            placeholder="Votre message"
+            [(ngModel)]="message"
+            name="message"
+            rows="6"
+            required
+          ></textarea>
+          <button
+            mat-raised-button
+            type="submit"
+            class="send-button"
+            [disabled]="!message.trim()"
+            aria-label="Envoyer le message"
+          >
+            <mat-icon>send</mat-icon>
+            <span>Envoyer</span>
+          </button>
+        </form>
+      </div>
+      <div *ngIf="!isLoggedIn" class="login-prompt">
+        <p>Vous devez être connecté pour envoyer un message.</p>
+        <button
+          mat-raised-button
+          (click)="redirectToLogin()"
+          class="login-button"
+        >
+          Se connecter
+        </button>
+      </div>
+    </aside>
+  </div>
+</section>

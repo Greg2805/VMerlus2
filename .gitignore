@@ -1,0 +1,130 @@
+# =========================
+# Java / Maven
+# =========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# =========================
+# IDE / Éditeurs
+# =========================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# =========================
+# OS / Système
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Environnement / Secrets
+# =========================
+.env
+.env.local
+!.env.example    # garder le modèle vierge pour les devs
+
+# =========================
+# Docker
+# =========================
+# Dossiers montés ou générés par Docker
+db_data/
+**/docker-entrypoint-initdb.d/*.bak
+**/docker-entrypoint-initdb.d/*.tmp
+
+# =========================
+# Logs / Temp
+# =========================
+*.log
+logs/
+tmp/
+*.tmp
+*.swp
+
+# =========================
+# Build tools / cache
+# =========================
+.mvn/
+mvnw.cmd
+mvnw
+!pom.xml    # garder le fichier de config Maven
+!docker-compose.yml
+
+/.idea/
+# System files
+.DS_Store
+Thumbs.db
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Angular
+.angular/
+.angular/cache/
+dist/
+build/
+
+# Node
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+/.angular/
+
+/.idea/
