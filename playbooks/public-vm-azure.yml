@@ -35,6 +35,7 @@
       azure_rm_publicipaddress:
         resource_group: Groupe5ResourceGroup
         allocation_method: Static
+        sku: Standard
         name: Groupe5PublicIP
 
     # 5. Network Interface
