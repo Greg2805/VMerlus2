@@ -43,9 +43,12 @@
       azure_rm_networkinterface:
         resource_group: Groupe5ResourceGroup
         name: Groupe5NIC
+        location: westeurope
         virtual_network: Groupe5VNet
-        subnet: Groupe5Subnet
-        public_ip_name: Groupe5PublicIP
+        subnet_name: Groupe5Subnet
+        ip_configurations:
+          - name: ipconfig1
+            public_ip_address_name: Groupe5PublicIP
 
     # 6. Virtual Machine
     - name: Create virtual machine
