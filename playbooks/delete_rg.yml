@@ -1,0 +1,14 @@
+---
+- name: Delete Azure Resource Group
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  collections:
+    - azure.azcollection
+
+  tasks:
+    - name: Delete the resource group
+      azure_rm_resourcegroup:
+        name: Group5ResourceGroup
+        state: absent
